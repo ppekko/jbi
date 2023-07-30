@@ -1,0 +1,9 @@
+exe = exampleprogram
+cc = tcc
+src = source/
+cflags = -DSDL_DISABLE_IMMINTRIN_H
+ldflags = -lm
+libs = SDL2
+include = include/
+pre = echo "this is being ran before compilation"
+post = echo "this is being ran after compilation"

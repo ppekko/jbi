@@ -1,0 +1,9 @@
+exe = exampleprogram
+cc = gcc
+src = source/
+cflags = -lm
+ldflags = -lm
+libs = SDL2
+include = include/
+pre = echo "this is being ran before compilation"
+post = echo "this is being ran after compilation"
