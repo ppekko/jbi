@@ -1,7 +1,7 @@
 | <img src="logo/logo.svg" alt="img" width="50px"> | <h1 style="margin: 0;">Just Build It</h1> |
 |:-----------------------------------------------:|:---------------------------------------------------:|
 
-jbi is a highly minimal and tiny build system written in C99 that takes the fustration and bloat that CMake or meson could bring to creating/managing a project. The entire project is around 700 lines and compiles into a 17kb executable.
+jbi is a highly minimal and tiny build system written in C99 for UNIX based systems that takes the fustration and bloat that CMake or meson could bring to creating/managing a project. The entire project is around 700 lines and compiles into a 17kb executable.
 
 jbi requires a `justbuild.it` file to be present in the root of a project and requires the following to inside it at a minimum
 
