@@ -85,7 +85,7 @@ static unsigned int jbi_file_exists(const char* filename) {
 
 
 int main(int argc, char* argv[]) {
-    printf("jbi - just build it                              ver 1.00\n");
+    printf("jbi - just build it                              ver 1.01\n");
     printf("small and simple build system\n");
     printf("by pipe                         https://github.com/ppekko\n\n");
 

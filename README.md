@@ -25,7 +25,7 @@ An example project using SDL2 is avalible in the example-project/ folder of this
 
 # Dependencies
 
-Requires ccache and pkg-config installed to run. TCC is required to build.
+Requires pkg-config installed to run. TCC is required to build.
 
 # Building
 

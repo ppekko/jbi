@@ -20,7 +20,7 @@ void jbi_free_string_array(char** array, size_t num_elements) {
 
     for (size_t i = 0; i < num_elements; ++i) {
         free(array[i]);
-        array[i] = NULL; // Set the pointer to NULL after freeing to avoid double freeing
+        array[i] = NULL; // avoid double freeing
     }
     free(array);
 }
@@ -38,10 +38,10 @@ int jbi_is_object_file_up_to_date(const char* src_file, const char* obj_file, co
         return 0;
     }
     if (stat(obj_file, &obj_stat) == -1)
-        return 0; // Object file does not exist, needs compilation
+        return 0;
 
     if (src_stat.st_mtime > obj_stat.st_mtime) {
-        return 0; // Source file has been modified, needs compilation
+        return 0;
     }
 
     // Check if any header file is newer than the object file
@@ -52,13 +52,13 @@ int jbi_is_object_file_up_to_date(const char* src_file, const char* obj_file, co
         char buffer[128];
         if (fgets(buffer, sizeof(buffer), file) != NULL) {
             pclose(file);
-            return 0; // A newer header file found, needs recompilation
+            return 0;
         }
         pclose(file);
     }
 
-    printf("(skipped)..."); // Skipped message for up-to-date object file
-    return 1; // File has not been updated
+    printf("(skipped)...");
+    return 1; 
 }
 
 // Function to concatenate strings safely with size checks
