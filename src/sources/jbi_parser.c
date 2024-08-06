@@ -88,6 +88,8 @@ int jbi_parse_file(const char* filename) {
     char line[256];
     while (fgets(line, sizeof(line), file)) {
         char *var_name, *var_value;
+        if (line[0] == '\n')
+            continue;
         if (jbi_extract_variable(jbi_trim_whitespace(line), &var_name, &var_value)) {
 
             jbi_add_variable(&variables, var_name, var_value);
